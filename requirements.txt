@@ -1,0 +1,14 @@
+APScheduler==3.11.0
+fastapi==0.115.8
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.15.1
+python-dotenv==1.0.1
+pytz==2024.2
+SQLAlchemy==2.0.35
+uvicorn==0.34.0
+pyodbc==5.1.0
+requests==2.32.3
+sqlmodel==0.0.24
+prometheus-fastapi-instrumentator==7.1.0
+

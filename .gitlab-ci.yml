@@ -1,0 +1,16 @@
+stages:
+  - deploy
+
+deploy_surge:
+  stage: deploy
+  script:
+    - docker stop surge_container || true
+    - docker rm surge_container || true
+    - docker rmi surge_image || true
+    - docker build -t surge_image .
+    - docker run -d -p 8070:8070 -v /home/gitlab-runner/builds/miPS2uxj/0/datajet/dataengineering/infra/airflow-main/envlocal:/app/envlocal --name surge_container surge_image
+  only:
+    - main
+  tags:
+    - ubutu_tag
+
